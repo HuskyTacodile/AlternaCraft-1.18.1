@@ -1,0 +1,131 @@
+{
+  "spino_roar1": {
+    "category": "entities",
+    "subtitle": "alternacraft.spino_roar1",
+    "sounds": [
+      "alternacraft:spino_roar1"
+    ]
+  },
+  "spino_roar2": {
+    "category": "entities",
+    "subtitle": "alternacraft.spino_roar2",
+    "sounds": [
+      "alternacraft:spino_roar2"
+    ]
+  },
+  "satellite_spino": {
+    "category": "entities",
+    "subtitle": "alternacraft.satellite_spino",
+    "sounds": [
+      "alternacraft:satellite_spino"
+    ]
+  },
+  "spino_roar3": {
+    "category": "entities",
+    "subtitle": "alternacraft.spino_roar3",
+    "sounds": [
+      "alternacraft:spino_roar3"
+    ]
+  },
+  "indominus_rex_roar1": {
+    "category": "entities",
+    "subtitle": "alternacraft.indominus_rex_roar1",
+    "sounds": [
+      "alternacraft:indominus_rex_roar1"
+    ]
+  },
+  "indominus_rex_roar2": {
+    "category": "entities",
+    "subtitle": "alternacraft.indominus_rex_roar2",
+    "sounds": [
+      "alternacraft:indominus_rex_roar2"
+    ]
+  },
+  "indominus_rex_growl": {
+    "category": "entities",
+    "subtitle": "alternacraft.indominus_rex_growl",
+    "sounds": [
+      "alternacraft:indominus_rex_growl"
+    ]
+  },
+  "acro_growl": {
+    "category": "entities",
+    "subtitle": "alternacraft.acro_growl",
+    "sounds": [
+      "alternacraft:acro_growl"
+    ]
+  },
+  "acro_roar1": {
+    "category": "entities",
+    "subtitle": "alternacraft.acro_roar1",
+    "sounds": [
+      "alternacraft:acro_roar1"
+    ]
+  },
+  "acro_roar2": {
+    "category": "entities",
+    "subtitle": "alternacraft.acro_roar2",
+    "sounds": [
+      "alternacraft:acro_roar2"
+    ]
+  },
+
+  "indoraptor_roar_1": {
+    "category": "entities",
+    "subtitle": "alternacraft.indoraptor_roar_1",
+    "sounds": [
+      "alternacraft:indoraptor_roar_1"
+    ]
+  },
+
+  "indoraptor_roar_2": {
+    "category": "entities",
+    "subtitle": "alternacraft.indoraptor_roar_2",
+    "sounds": [
+      "alternacraft:indoraptor_roar_2"
+    ]
+  },
+
+  "indoraptor_roar_3": {
+    "category": "entities",
+    "subtitle": "alternacraft.indoraptor_roar_3",
+    "sounds": [
+      "alternacraft:indoraptor_roar_3"
+    ]
+  },
+  "ceratosuchops_idle_roar": {
+    "category": "entities",
+    "subtitle": "alternacraft.ceratosuchops_idle_roar",
+    "sounds": [
+      "alternacraft:ceratosuchops_idle_roar"
+    ]
+  },
+  "ceratosuchops_hurt": {
+    "category": "entities",
+    "subtitle": "alternacraft.ceratosuchops_hurt",
+    "sounds": [
+      "alternacraft:ceratosuchops_hurt"
+    ]
+  },
+  "spinosaurus_death": {
+    "category": "entities",
+    "subtitle": "alternacraft.spinosaurus_death",
+    "sounds": [
+      "alternacraft:spinosaurus_death"
+    ]
+  },
+  "spinosaurus_idle_roar": {
+    "category": "entities",
+    "subtitle": "alternacraft.spinosaurus_idle_roar",
+    "sounds": [
+      "alternacraft:spinosaurus_idle_roar"
+    ]
+  },
+  "spinosaurus_hurt": {
+    "category": "entities",
+    "subtitle": "alternacraft.spinosaurus_hurt",
+    "sounds": [
+      "alternacraft:spinosaurus_hurt"
+    ]
+  }
+}
