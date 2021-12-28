@@ -4,19 +4,19 @@ import com.huskytacodile.alternacraft.Alternacraft;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
-public class JWGAMaleSpinoModel extends AnimatedGeoModel {
+public class JPFemaleSpinoModel extends AnimatedGeoModel {
     @Override
     public ResourceLocation getAnimationFileLocation(Object entity) {
-        return new ResourceLocation(Alternacraft.MOD_ID, "animations/jwgafemalespino.animation.json");
+        return new ResourceLocation(Alternacraft.MOD_ID, "animations/jpspino.animation.json");
     }
 
     @Override
     public ResourceLocation getModelLocation(Object entity) {
-        return new ResourceLocation(Alternacraft.MOD_ID, "geo/jwgafemalespino.geo.json");
+        return new ResourceLocation(Alternacraft.MOD_ID, "geo/jpspino.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureLocation(Object entity) {
-        return new ResourceLocation(Alternacraft.MOD_ID, "textures/entity/jwgamalespino.png");
+        return new ResourceLocation(Alternacraft.MOD_ID, "textures/entity/jpfemalespino.png");
     }
 }

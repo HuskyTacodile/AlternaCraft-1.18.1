@@ -39,12 +39,12 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 
-public class NotSoHollySpinoEntity extends TamableAnimal implements IAnimatable, ItemSteerable {
+public class JPMaleSpinoEntity extends TamableAnimal implements IAnimatable, ItemSteerable {
     private AnimationFactory factory = new AnimationFactory(this);
     private static final EntityDataAccessor<Boolean> DATA_SADDLE_ID = SynchedEntityData.defineId(Pig.class, EntityDataSerializers.BOOLEAN);
     private final ItemBasedSteering steering = new ItemBasedSteering(this.entityData, DATA_BOOST_TIME,DATA_SADDLE_ID);
     private static final EntityDataAccessor<Integer> DATA_BOOST_TIME = SynchedEntityData.defineId(Pig.class, EntityDataSerializers.INT);
-    protected NotSoHollySpinoEntity(EntityType<? extends TamableAnimal> p_i48575_1_, Level p_i48575_2_) {
+    protected JPMaleSpinoEntity(EntityType<? extends TamableAnimal> p_i48575_1_, Level p_i48575_2_) {
         super(p_i48575_1_, p_i48575_2_);
         this.setTame(false);
     }
@@ -84,30 +84,30 @@ public class NotSoHollySpinoEntity extends TamableAnimal implements IAnimatable,
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (!(animationSpeed > -0.10F && animationSpeed < 0.05F) && !this.isAggressive()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.spino.walk", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.jpspinosaurus.walk", true));
             return PlayState.CONTINUE;
         }
         if (this.isAggressive() && !(this.dead || this.getHealth() < 0.01 || this.isDeadOrDying())) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.spino.attack", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.jpspinosaurus.attack", true));
             return PlayState.CONTINUE;
         }
         if (this.isOrderedToSit() || this.getHealth() < 0.01 || this.isDeadOrDying()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.spino.sit", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.jpspinosaurus.idle", true));
             return PlayState.CONTINUE;
         }
         if (this.isSwimming() && !(animationSpeed > -0.10F && animationSpeed < 0.05F) && !this.isAggressive()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.spino.swim", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.jpspinosaurus.walk", true));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.spino.idle", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.jpspinosaurus.idle", true));
 
         return PlayState.CONTINUE;
     }
 
     @Override
     public void registerControllers(AnimationData data) {
-        data.addAnimationController(new AnimationController<NotSoHollySpinoEntity>
+        data.addAnimationController(new AnimationController<JPMaleSpinoEntity>
                 (this, "controller", 0, this::predicate));
     }
 

@@ -45,8 +45,8 @@ public class Alternacraft {
     @SubscribeEvent
     public void registerRenderers(final EntityRenderersEvent.RegisterRenderers event)
     {
-        event.registerEntityRenderer(ModEntityTypes.JWGAFEMALESPINO.get(), manager -> new JWGAFemaleSpinoRenderer(manager));
-        event.registerEntityRenderer(ModEntityTypes.JWGAMALESPINO.get(), manager -> new JWGAMaleSpinoRenderer(manager));
+        event.registerEntityRenderer(ModEntityTypes.JPFEMALESPINO.get(), manager -> new JPFemaleSpinoRenderer(manager));
+        event.registerEntityRenderer(ModEntityTypes.JPMALESPINO.get(), manager -> new JPMaleSpinoRenderer(manager));
         event.registerEntityRenderer(ModEntityTypes.INDOMINUS_MALE.get(), manager -> new IndominusMaleRenderer(manager));
         event.registerEntityRenderer(ModEntityTypes.INDOMINUS_FEMALE.get(), manager -> new IndominusFemaleRenderer(manager));
         event.registerEntityRenderer(ModEntityTypes.INDOMINUS_ELEMENTAL.get(), manager -> new IndominusElementalRenderer(manager));
@@ -57,7 +57,6 @@ public class Alternacraft {
         event.registerEntityRenderer(ModEntityTypes.INDORAPTOR_FEMALE.get(), manager -> new IndoraptorFemaleRenderer(manager));
         event.registerEntityRenderer(ModEntityTypes.INDORAPTOR_CHRISTMAS.get(), manager -> new IndoraptorChristmasRenderer(manager));
         event.registerEntityRenderer(ModEntityTypes.CERATOSUCHOPS_MALE.get(), manager -> new MaleCeratosuchopsRenderer(manager));
-        event.registerEntityRenderer(ModEntityTypes.NOT_SO_HOLLY_SPINO.get(), manager -> new NotSoHollySpinoRenderer(manager));
         event.registerEntityRenderer(ModEntityTypes.CERATOSUCHOPS_FEMALE.get(), manager -> new FemaleCeratosuchopsRenderer(manager));
         event.registerEntityRenderer(ModEntityTypes.FEMALESPINO.get(), manager -> new FemaleSpinoRenderer(manager));
         ModItemProperties.makeBow(ModItems.PAINITE_BOW.get());

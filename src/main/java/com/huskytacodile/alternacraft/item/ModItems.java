@@ -16,17 +16,14 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Alternacraft.MOD_ID);
 
-    public static final RegistryObject<ModSpawnEggItem> JWGAFEMALESPINO_SPAWN_EGG = ITEMS.register("jwgafemalespino_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.JWGAFEMALESPINO, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ModSpawnEggItem> JWGAFEMALESPINO_SPAWN_EGG = ITEMS.register("jpfemalespino_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.JPFEMALESPINO, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> JWGAMALESPINO_SPAWN_EGG = ITEMS.register("jwgamalespino_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.JWGAMALESPINO, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ModSpawnEggItem> JPMALESPINO_SPAWN_EGG = ITEMS.register("jpspino_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.JPMALESPINO, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> NOT_SO_HOLLY_SPINO_SPAWN_EGG = ITEMS.register("not_so_holly_spino_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.NOT_SO_HOLLY_SPINO, 0x464F56, 0x1D6336,
-                    new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
     public static final RegistryObject<ModSpawnEggItem> INDOMINUS_FEMALE_SPAWN_EGG = ITEMS.register("indominus_female_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.INDOMINUS_FEMALE, 0x464F56, 0x1D6336,

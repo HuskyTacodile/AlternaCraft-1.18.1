@@ -13,6 +13,7 @@ public class ModOreGeneration {
     public static void generateOres(final BiomeLoadingEvent event) {
         List<Supplier<PlacedFeature>> base =
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
+
         base.add(() -> ModPlacedFeatures.TITANIUM_ORE_PLACED);
     }
 }

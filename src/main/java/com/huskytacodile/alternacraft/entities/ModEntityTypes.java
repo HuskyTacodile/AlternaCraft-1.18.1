@@ -16,17 +16,12 @@ public class ModEntityTypes {
     public static DeferredRegister<EntityType<?>> ENTITY_TYPES
             = DeferredRegister.create(ForgeRegistries.ENTITIES, Alternacraft.MOD_ID);
 
-    public static final RegistryObject<EntityType<JWGAFemaleSpinoEntity>> JWGAFEMALESPINO =
-            ENTITY_TYPES.register("jwgafemalespino",
-                    () -> EntityType.Builder.of(JWGAFemaleSpinoEntity::new,
+    public static final RegistryObject<EntityType<JPFemaleSpinoEntity>> JPFEMALESPINO =
+            ENTITY_TYPES.register("jpfemalespino",
+                    () -> EntityType.Builder.of(JPFemaleSpinoEntity::new,
                                     MobCategory.CREATURE).sized(4f, 4f)
-                            .build(new ResourceLocation(Alternacraft.MOD_ID, "jwgafemalespino").toString()));
+                            .build(new ResourceLocation(Alternacraft.MOD_ID, "jpfemalespino").toString()));
 
-    public static final RegistryObject<EntityType<NotSoHollySpinoEntity>> NOT_SO_HOLLY_SPINO =
-            ENTITY_TYPES.register("not_so_holly_spino",
-                    () -> EntityType.Builder.of(NotSoHollySpinoEntity::new,
-                                    MobCategory.CREATURE).sized(4f, 4f)
-                            .build(new ResourceLocation(Alternacraft.MOD_ID, "not_so_holly_spino").toString()));
 
     public static final RegistryObject<EntityType<MaleSpinoEntity>> MALESPINO =
             ENTITY_TYPES.register("male_spino",
@@ -40,11 +35,11 @@ public class ModEntityTypes {
                                     MobCategory.CREATURE).sized(4f, 4f)
                             .build(new ResourceLocation(Alternacraft.MOD_ID, "female_spino").toString()));
 
-    public static final RegistryObject<EntityType<JWGAMaleSpinoEntity>> JWGAMALESPINO =
-            ENTITY_TYPES.register("jwgamalespino",
-                    () -> EntityType.Builder.of(JWGAMaleSpinoEntity::new,
+    public static final RegistryObject<EntityType<JPMaleSpinoEntity>> JPMALESPINO =
+            ENTITY_TYPES.register("jpmalespino",
+                    () -> EntityType.Builder.of(JPMaleSpinoEntity::new,
                                     MobCategory.CREATURE).sized(4f, 4f)
-                            .build(new ResourceLocation(Alternacraft.MOD_ID, "jwgamalespino").toString()));
+                            .build(new ResourceLocation(Alternacraft.MOD_ID, "jpmalespino").toString()));
 
     public static final RegistryObject<EntityType<MaleCeratosuchopsEntity>> CERATOSUCHOPS_MALE =
             ENTITY_TYPES.register("ceratosuchops_male",
