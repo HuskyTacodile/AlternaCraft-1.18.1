@@ -2,10 +2,10 @@ package com.huskytacodile.alternacraft.item;
 
 import com.huskytacodile.alternacraft.Alternacraft;
 import com.huskytacodile.alternacraft.entities.ModEntityTypes;
-import com.huskytacodile.alternacraft.item.custom.ModSpawnEggItem;
 import com.huskytacodile.alternacraft.item.custom.PainiteBowItem;
 
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,61 +16,61 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Alternacraft.MOD_ID);
 
-    public static final RegistryObject<ModSpawnEggItem> JWGAFEMALESPINO_SPAWN_EGG = ITEMS.register("jpfemalespino_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.JPFEMALESPINO, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> JWGAFEMALESPINO_SPAWN_EGG = ITEMS.register("jpfemalespino_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.JPFEMALESPINO, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> JPMALESPINO_SPAWN_EGG = ITEMS.register("jpspino_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.JPMALESPINO, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> JPMALESPINO_SPAWN_EGG = ITEMS.register("jpspino_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.JPMALESPINO, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
 
-    public static final RegistryObject<ModSpawnEggItem> INDOMINUS_FEMALE_SPAWN_EGG = ITEMS.register("indominus_female_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.INDOMINUS_FEMALE, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> INDOMINUS_FEMALE_SPAWN_EGG = ITEMS.register("indominus_female_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.INDOMINUS_FEMALE, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> INDOMINUS_MALE_SPAWN_EGG = ITEMS.register("indominus_male_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.INDOMINUS_MALE, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> INDOMINUS_MALE_SPAWN_EGG = ITEMS.register("indominus_male_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.INDOMINUS_MALE, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> MALE_SPINOSAURUS_SPAWN_EGG = ITEMS.register("male_spino_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.MALESPINO, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> MALE_SPINOSAURUS_SPAWN_EGG = ITEMS.register("male_spino_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.MALESPINO, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> FEMALE_SPINOSAURUS_SPAWN_EGG = ITEMS.register("female_spino_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.FEMALESPINO, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> FEMALE_SPINOSAURUS_SPAWN_EGG = ITEMS.register("female_spino_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.FEMALESPINO, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> CERATOSUCHOPS_MALE_SPAWN_EGG = ITEMS.register("ceratosuchops_male_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.CERATOSUCHOPS_MALE, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> CERATOSUCHOPS_MALE_SPAWN_EGG = ITEMS.register("ceratosuchops_male_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.CERATOSUCHOPS_MALE, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> CERATOSUCHOPS_FEMALE_SPAWN_EGG = ITEMS.register("ceratosuchops_female_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.CERATOSUCHOPS_FEMALE, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> CERATOSUCHOPS_FEMALE_SPAWN_EGG = ITEMS.register("ceratosuchops_female_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.CERATOSUCHOPS_FEMALE, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> INDOMINUS_ELEMENTAL_SPAWN_EGG = ITEMS.register("indominus_elemental_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.INDOMINUS_ELEMENTAL, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> INDOMINUS_ELEMENTAL_SPAWN_EGG = ITEMS.register("indominus_elemental_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.INDOMINUS_ELEMENTAL, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> INDORAPTOR_MALE_SPAWN_EGG = ITEMS.register("indoraptor_male_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.INDORAPTOR_MALE, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> INDORAPTOR_MALE_SPAWN_EGG = ITEMS.register("indoraptor_male_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.INDORAPTOR_MALE, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> INDORAPTOR_FEMALE_SPAWN_EGG = ITEMS.register("indoraptor_female_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.INDORAPTOR_FEMALE, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> INDORAPTOR_FEMALE_SPAWN_EGG = ITEMS.register("indoraptor_female_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.INDORAPTOR_FEMALE, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> INDORAPTOR_CHRISTMAS_SPAWN_EGG = ITEMS.register("indoraptor_christmas_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.INDORAPTOR_CHRISTMAS, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> INDORAPTOR_CHRISTMAS_SPAWN_EGG = ITEMS.register("indoraptor_christmas_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.INDORAPTOR_CHRISTMAS, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> ACRO_MALE_SPAWN_EGG = ITEMS.register("acro_male_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.ACRO_MALE, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> ACRO_MALE_SPAWN_EGG = ITEMS.register("acro_male_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ACRO_MALE, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
-    public static final RegistryObject<ModSpawnEggItem> ACRO_FEMALE_SPAWN_EGG = ITEMS.register("acro_female_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.ACRO_FEMALE, 0x464F56, 0x1D6336,
+    public static final RegistryObject<ForgeSpawnEggItem> ACRO_FEMALE_SPAWN_EGG = ITEMS.register("acro_female_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ACRO_FEMALE, 0x464F56, 0x1D6336,
                     new Item.Properties().tab(ModCreativeModeTab.ALTERNACRAFT_GROUP)));
 
     public static final RegistryObject<Item> FOSSIL = ITEMS.register("fossil",

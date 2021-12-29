@@ -6,6 +6,8 @@ import com.huskytacodile.alternacraft.entities.ModEntityTypes;
 import com.huskytacodile.alternacraft.item.ModItems;
 import com.huskytacodile.alternacraft.util.ModItemProperties;
 import com.huskytacodile.alternacraft.util.ModSoundEvents;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -60,6 +62,10 @@ public class Alternacraft {
         event.registerEntityRenderer(ModEntityTypes.CERATOSUCHOPS_FEMALE.get(), manager -> new FemaleCeratosuchopsRenderer(manager));
         event.registerEntityRenderer(ModEntityTypes.FEMALESPINO.get(), manager -> new FemaleSpinoRenderer(manager));
         ModItemProperties.makeBow(ModItems.PAINITE_BOW.get());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DNA_SEQUENCER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DNA_COMBINATOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DNA_EXTRACTOR.get(), RenderType.cutout());
+
     }
 
     private void setup(final FMLCommonSetupEvent event)
