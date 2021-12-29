@@ -16,6 +16,5 @@ public class ModConfiguredFeature {
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_TITANIUM_ORE.get().defaultBlockState()));
 
     public static final ConfiguredFeature<?, ?> TITANIUM_ORE = FeatureUtils.register("titanium_ore",
-            Feature.ORE.configured(new OreConfiguration(OVER, 9)));
-
+            Feature.ORE.configured(new OreConfiguration(OVERWORLD_TITANIUM_ORES, 9)));
 }
