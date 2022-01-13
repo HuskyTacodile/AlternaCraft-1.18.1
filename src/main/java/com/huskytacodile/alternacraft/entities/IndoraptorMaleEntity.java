@@ -44,6 +44,11 @@ public class IndoraptorMaleEntity extends TamableAnimal implements IAnimatable, 
     private static final EntityDataAccessor<Boolean> DATA_SADDLE_ID = SynchedEntityData.defineId(Pig.class, EntityDataSerializers.BOOLEAN);
     private final ItemBasedSteering steering = new ItemBasedSteering(this.entityData, DATA_BOOST_TIME,DATA_SADDLE_ID);
     private static final EntityDataAccessor<Integer> DATA_BOOST_TIME = SynchedEntityData.defineId(Pig.class, EntityDataSerializers.INT);
+
+    private static final EntityDataAccessor<Boolean> SITTING =
+            SynchedEntityData.defineId(IndoraptorMaleEntity.class, EntityDataSerializers.BOOLEAN);
+
+
     protected IndoraptorMaleEntity(EntityType<? extends TamableAnimal> p_i48575_1_, Level p_i48575_2_) {
         super(p_i48575_1_, p_i48575_2_);
         this.setTame(false);
@@ -53,6 +58,12 @@ public class IndoraptorMaleEntity extends TamableAnimal implements IAnimatable, 
         return item.isEdible() && item.getFoodProperties().isMeat();
     }
 
+
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(SITTING, false);
+    }
 
     @Override
     protected SoundEvent getAmbientSound()
@@ -83,7 +94,7 @@ public class IndoraptorMaleEntity extends TamableAnimal implements IAnimatable, 
 
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-        if (!(animationSpeed > -0.10F && animationSpeed < 0.05F) && !this.isAggressive()) {
+        if (!(animationSpeed > -0.10F && animationSpeed < 0.05F) && !this.isAggressive() && event.isMoving()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.indoraptor.walk", true));
             return PlayState.CONTINUE;
         }
@@ -91,7 +102,7 @@ public class IndoraptorMaleEntity extends TamableAnimal implements IAnimatable, 
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.indoraptor.attack", true));
             return PlayState.CONTINUE;
         }
-        if (this.isOrderedToSit() || this.getHealth() < 0.01 || this.isDeadOrDying()) {
+        if (this.isSitting()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.indoraptor.sit", true));
             return PlayState.CONTINUE;
         }
@@ -99,6 +110,15 @@ public class IndoraptorMaleEntity extends TamableAnimal implements IAnimatable, 
         event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.indoraptor.idle", true));
 
         return PlayState.CONTINUE;
+    }
+
+    public void setSitting(boolean sitting) {
+        this.entityData.set(SITTING, sitting);
+        this.setOrderedToSit(sitting);
+    }
+
+    public boolean isSitting() {
+        return this.entityData.get(SITTING);
     }
 
     @Override
@@ -128,6 +148,11 @@ public class IndoraptorMaleEntity extends TamableAnimal implements IAnimatable, 
 
         } else {
             if (this.isTame()) {
+
+                if(p_230254_1_.isCrouching() && p_230254_2_ == InteractionHand.MAIN_HAND) {
+                    setSitting(!isSitting());
+                }
+
                 if (this.isFood(itemstack) && this.getHealth() < this.getMaxHealth()) {
                     if (!p_230254_1_.getAbilities().instabuild) {
                         itemstack.shrink(1);
@@ -241,13 +266,13 @@ public class IndoraptorMaleEntity extends TamableAnimal implements IAnimatable, 
         super.registerGoals();
         this.goalSelector.addGoal(6, new FollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
         this.goalSelector.addGoal(2, new SitWhenOrderedToGoal(this));
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
-        this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1));
+        this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false));
+        this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(Items.NETHERITE_SWORD), false));
-        this.goalSelector.addGoal(0,new RandomSwimmingGoal(this,0,1));
-        this.goalSelector.addGoal(2, new FloatGoal(this));
+        this.goalSelector.addGoal(3, new RandomSwimmingGoal(this,0,1));
+        this.goalSelector.addGoal(1, new FloatGoal(this));
     }
     @Nullable
     @Override
